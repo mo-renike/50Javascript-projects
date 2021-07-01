@@ -1,0 +1,14 @@
+{
+    "editor.linkedEditing": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.https": {
+        "enable": true
+    },
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.useBrowserPreview": true,
+    "prettier.trailingComma": "all",
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true
+}
