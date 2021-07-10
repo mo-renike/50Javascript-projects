@@ -5,11 +5,49 @@
 }
 
 body{
+    background-image: linear-gradient(80deg, #102310, #300430);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.search{
+    position: relative;
+    height: 50px;
+}
+
+ .input{
+    background-color: white;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width .4s ease;
+}
+ .btn{
+    position: absolute;
+    border: 0;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .4s ease;  
+}
+
+.btn:focus,
+.input:focus{
+    outline: none;
+}
+.search.active .input{
+    width: 200px;
+}
+
+.search.active .btn{
+    transform: translateX(198px);
 }
