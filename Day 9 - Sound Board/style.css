@@ -8,7 +8,7 @@
 
 body{
     display: flex;
-    flex-direction: column;
+    background-color: #101010;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -16,3 +16,24 @@ body{
     font-family:'Source Code Pro', monospace;
 }
 
+.btn{
+    background-color: #3333;
+    color: #ff6347;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 1em 3em;
+    margin: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
