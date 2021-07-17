@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,900;1,200;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: #506070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1.5rem;
+  font-size: 20px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.container {
+  background-color: #304050;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 100%;
+  width: 70%;
+  box-shadow: 3px 3px 4px #111111, -3px -3px 4px #0f0f0f;
+}
+
+h3 {
+  margin: 0;
+  opacity: 0.7;
+  letter-spacing: 2px;
+  font-size: 1.6em;
+}
+
+.jokes {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 3rem auto;
+  max-width: 80%;
+}
+
+.btn {
+  background-color: #203040;
+  border-radius: 10px;
+  /* color: #efefef; */
+  box-shadow: 3px 3px 4px #111111, -3px -3px 4px #0f0f0f;
+  padding: 1em 2.2em;
+  font-size: 1em;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+}
+.btn:active {
+  transform: scale(0.93);
+}
+
+@media (max-width:769px) {
+    .container{
+        width: 90%;
+    }
+    .jokes{
+        max-width: 90%;
+    }
+    body{
+        font-size: 18px;
+    }
+}
