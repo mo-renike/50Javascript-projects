@@ -5,11 +5,13 @@ sounds.forEach((sound) => {
 
   btn.classList.add("btn");
   btn.innerText = sound;
+  document.querySelector(".buttons").appendChild(btn);
+  
   btn.addEventListener("click", () => {
     stopPlaying();
     document.getElementById(sound).play();
   });
-  document.querySelector(".buttons").appendChild(btn);
+  
 });
 
 function stopPlaying() {
