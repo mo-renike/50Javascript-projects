@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=muli:ital,wght@0,900;1,200;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background-color: #000600;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family:'muli', sans-serif;
+    color: #00ff00;
+}
+
+.key{
+    border: 1px solid #00ff00; 
+    box-shadow: 1px 1px 2px #00ff00, -1px -1px 2px #00ff00;
+    margin: 10px;
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px; 
+    position: relative;
+}
+
+.key small{
+    position: absolute;
+    top: -24px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0.3;
+    font-size: 14px;
+}
+
