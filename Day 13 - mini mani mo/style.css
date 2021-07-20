@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=muli:ital,wght@0,900;1,200;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family:'muli', sans-serif;
+    background-color: #082b2c;
+}
+
+.container{
+    width: 70%;
+    margin: auto auto;
+    padding: 30px;
+}
+
+h3{
+    font-size: 1.2rem;
+    color: #efefef;
+    margin: 1em auto;
+    text-align: center;
+}
+
+textarea{
+    width: 100%;
+    background-color: inherit;
+    display: block;
+    outline: none;
+    height: 100px;
+    color: #efefee;
+    padding: 20px;
+    border-radius: 10px;
+      box-shadow: inset 5px 6px 5px #051718, inset -5px -5px 5px #051a1a;
+
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1em auto
+}
+
+.tag{
+    margin:  5px;
+    background-color: #44080a;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: .9em;
+    border: none;
+}
+
+.tag.highlight{
+    background-color: #104446;
+}
+ 
