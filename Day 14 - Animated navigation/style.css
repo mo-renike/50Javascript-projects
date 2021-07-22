@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Muli", monospace;
+  background-color: #092e00;
+  color: #fefefe;
+  font-size: 18px;
+}
+
+header {
+  /* background-color: #041500; */
+  background-image: linear-gradient(
+    to bottom,
+    #041500 0%,
+    #041500 50%,
+    #051c00 50%,
+    #051c00 100%
+  );
+  display: flex;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* .brand {
+  font-size: 2.3em;
+  font-weight: 700;
+} */
+
+nav {
+  display: flex;
+  transition: width 0.6s linear;
+  width: 50px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav.active {
+  width: auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+  width: 0;
+  transition: width 0.6s linear;
+}
+ul li {
+  opacity: 0;
+  transform: rotateY(0deg);
+  transition: transform 0.6s linear;
+  transition: opacity 0.6s linear;
+}
+ul li a {
+  color: inherit;
+  margin: auto 10px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+.icon {
+  cursor: pointer;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background-color: inherit;
+}
+
+.icon .line{
+    background-color: #2bd500;
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    transition: transform 0.8s linear;
+}
+
+.icon .line2{
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1{
+    transform: rotate(-765deg) translateY(8.5px);
+}
+
+nav.active .icon .line2{
+    transform: rotate(765deg) translateY(-8.5px);
+}
