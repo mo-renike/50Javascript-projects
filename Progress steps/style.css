@@ -3,10 +3,7 @@
   margin: 0;
   border: 0;
 }
-:root{
-    --line-border-fill: #a90000;
-    --line-border-empty: #b6b6b6;
-}
+
 body {
   display: flex;
   /* background-color: #151515; */
