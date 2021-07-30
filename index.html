@@ -14,12 +14,12 @@
         :root{
             --dark-bg: #c3c6b1;
             --darker-bg:#adb38a;
-            --darkest-bg:#4b553a;
+            --darkest-bg:#060706;
             --font-color:#c58b2a;
         }
         body{
             background-color: var(--dark-bg);
-            color: var(--font-color);
+            color: var(--darkest-bg);
             font-size: 18px;
         }
         .container{
@@ -44,7 +44,7 @@
         a{
             text-decoration: none;
             color: inherit;
-            background-color: var(--darkest-bg);
+            box-shadow: 1px 2px 2px var(--darkest-bg),  -1px -2px 2px var(--darkest-bg) ;
             padding: .5em 1em;
             margin: 10px;
             border-radius: 10px;
