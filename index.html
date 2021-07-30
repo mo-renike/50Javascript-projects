@@ -12,8 +12,8 @@
             border: 0;
         }
         :root{
-            --dark-bg:#f7e3d4;
-            --darker-bg:#c3c6b1;
+            --dark-bg: #c3c6b1;
+            --darker-bg:#adb38a;
             --darkest-bg:#4b553a;
             --font-color:#c58b2a;
         }
@@ -54,7 +54,13 @@
         }
         .projects{
             display: flex;
-            flex-wrap: wrap;}
+            flex-wrap: wrap;
+          }
+          @media (max-width:422px) {
+            body{
+              font-size: 15px;
+            }
+          }
     </style>
   </head>
   <body>
