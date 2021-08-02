@@ -8,7 +8,7 @@
 
 body {
   font-family: "muli";
-  background-color: #0f0000;
+  background-color: #130000;
   color: #ffb4b4;
 }
 h1 {
@@ -28,7 +28,7 @@ h1 {
   overflow: hidden;
   transition: all 0.3s ease;
   border-radius: 10px;
-  background-color: white;
+  background-color: #0f0000;
 }
 
 .faq.active {
