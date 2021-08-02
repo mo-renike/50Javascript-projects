@@ -17,7 +17,6 @@ async function getMovies(url) {
   showMovies(data.results);
 }
 
-
 const showMovies = (movies) => {
   main.innerHTML = " ";
   movies.forEach((movie) => {
@@ -34,26 +33,16 @@ const showMovies = (movies) => {
         </div>
         <div class="overview">
           <h3>Overview</h3>${overview}</div>
-    `
+    `;
+    console.log(movieEl);
     main.appendChild(movieEL);
   });
-}; 
+};
 
-
-function rating(vote) {
-    if(vote >= 8) {
-        return 'green'
-    } else if(vote >= 5) {
-        return 'orange'
-    } else {
-        return 'red'
-    }
-}
-
-
-// const rating = (vote) =>  { return
-//  ( vote >= 8 ? 'green' : vote >= 5 ? 'orange' : 'red')
-// };
+const rating = (vote) => {
+  vote >= 8 ? "green" : vote >= 5 ? "orange" : "red";
+};
+rating();
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
