@@ -3,10 +3,14 @@
   margin: 0;
   border: 0;
 }
+:root{
+  --line-border-fill: #00c3ee;
+  --line-border-empty: #3a3a3a;
+}
 
 body {
   display: flex;
-  /* background-color: #151515; */
+  background-color: #151515;
   align-items: center;
   justify-content: center;
   height: 100vh;
