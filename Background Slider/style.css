@@ -35,6 +35,7 @@ body::before {
   width: 70vw;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 .slide {
   opacity: 0;
