@@ -1,18 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,900;1,200;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:ital,wght@0,900;1,200;1,500&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
     border: 0;
 }
-
+:root{
+    --primary-color: #212121;
+    --secondary-color: #efefef;
+}
+html {
+    transition: all 0.5s ease-in;
+}
+html.dark{
+    --secondary-color: #212121;
+    --primary-color: #efefef;
+}
+html.dark{
+    background-color: #151515;
+    color: var(--primary-color);
+}
 body{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    font-family:'Source Code Pro', monospace;
+    font-family:'Heebo', monospace;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
+
+.toggle{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+    outline: none;
+}
+
+.toggle:active{
+    transform: scale(1.1);
+}
+
+.clock-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.needle{
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center ;
+    border-radius: 2px;
+}
+.needle.hour{
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute{
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+}
+.needle.second{
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: #e40b00;
+}
+
+.center-point{
+    background-color: #e40b00;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+}
+.center-point::after{
+    content: '';
+    background-color: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+}
+.time{
+    font-size: 60px;
+}
+
+.date{
+    color: #aaa;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+.date.circle{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+}
