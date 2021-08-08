@@ -24,13 +24,13 @@ toggler.addEventListener("click", () => {
 });
 
 const days = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday",
-  "Sunday"
+  "Saturday"
 ];
 const months = [
   "JAN",
