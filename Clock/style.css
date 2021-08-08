@@ -1,138 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:ital,wght@0,900;1,200;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:ital,wght@0,900;1,200;1,500&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
 }
-:root{
-    --primary-color: #212121;
-    --secondary-color: #efefef;
+:root {
+  --primary-color: #ffb5b5;
+  --secondary-color: #110000;
 }
 html {
-    transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
-html.dark{
-    --secondary-color: #212121;
-    --primary-color: #efefef;
-}
-html.dark{
-    background-color: #101010;
-    color: var(--primary-color);
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family:'Heebo', monospace;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+html.dark {
+  --secondary-color: #001313;
+  --primary-color: #00fcfc;
+  color: var(--primary-color);
 }
 
-
-.toggle{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: 0;
-    border-radius: 5px;
-    text-transform: uppercase;
-    padding: 10px;
-    font-weight: bold;
-    position: absolute;
-    top: 100px;
-    cursor: pointer;
-    outline: none;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Heebo", monospace;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
-.toggle:active{
-    transform: scale(1.1);
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 30px;
 }
 
-.clock-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.toggle:active {
+  transform: scale(1.1);
 }
 
-.clock{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background-color: var(--secondary-color);
-    box-shadow:  1px 2px 3px var(--primary-color), 
-                 -1px -2px 3px var(--primary-color);
-    border-radius: 50%;
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.needle{
-    background-color: var(--primary-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 65px;
-    width: 3px;
-    transform-origin: bottom center ;
-    border-radius: 2px;
-}
-.needle.hour{
-    transform: translate(-50%, -100%) rotate(10deg);
-}
-.needle.minute{
-    transform: translate(-50%, -100%) rotate(50deg);
-    height: 90px;
-}
-.needle.second{
-    transform: translate(-50%, -100%) rotate(0deg);
-    height: 95px;
-    background-color: #e40b00;
+.clock {
+  position: relative;
+  margin: 25px auto;
+  width: 230px;
+  height: 230px;
+  border: 4px solid var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 -15px 10px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 10px rgba(255, 255, 255, 0.05),
+     0 15px 10px rgba(0, 0, 0, 0.3),
+    inset 0 15px 10px rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(25px); */
 }
 
-.center-point{
-    background-color: #e40b00;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 50%;
+.face {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
 }
-.center-point::after{
-    content: '';
-    background-color: var(--primary-color);
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 50%;
-}
-.time{
-    font-size: 60px;
+.line {
+  width: 2px;
+  background-color: #c0c0c0;
+  position: absolute;
+  height: 220px;
+  top: 0;
+  left: 50%;
+  transform: translate(-100%);
 }
 
-.date{
-    color: #aaa;
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
+.line.line2 {
+  transform: rotate(30deg);
 }
-.date .circle{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-radius: 5px;
-    height: 18px;
-    width: 18px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 18px;
-    font-weight: bold;
-    transition: 0.5s ease;
-    font-size: 12px;
+.line.line3 {
+  transform: rotate(60deg);
+}
+.line.line4 {
+  transform: rotate(90deg);
+}
+.line.line5 {
+  transform: rotate(120deg);
+}
+.line.line6 {
+  transform: rotate(150deg);
+}
+/* .clock img{
+    width: 100%;
+} */
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  z-index: 5;
+}
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 90px;
+}
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 95px;
+  background-color: #ffffff;
+}
+
+.center-point {
+  background-color: var(--primary-color);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  z-index: 100;
+}
+/* .center-point::after {
+  content: "";
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+} */
+.time {
+  font-size: 50px;
+}
+
+.date {
+  color: var(--primary-color);
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 5px;
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 18px;
+  font-weight: bold;
+  transition: 0.5s ease;
+  font-size: 15px;
 }
