@@ -30,7 +30,7 @@ const days = [
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
+  "Sunday"
 ];
 const months = [
   "JAN",
