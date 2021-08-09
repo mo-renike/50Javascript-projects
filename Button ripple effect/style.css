@@ -19,12 +19,13 @@ body{
 }
 
 button{
-    padding: 20px;
+    cursor: pointer;
+    padding: 30px;
     font-weight: bold;
     font-size: 25px;
     border-radius: 10px;
     border: none;
-    background-color: aqua;
+    background-color: #00bbbb;
     box-shadow: 1px 4px 6px #000, -1px -4px 6px #000;
     text-transform: uppercase;
     letter-spacing: 2;
@@ -36,7 +37,7 @@ button{
 
 button .circle{
     position: absolute;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
     width: 100px;
     height: 100px;
     border-radius: 50%;
