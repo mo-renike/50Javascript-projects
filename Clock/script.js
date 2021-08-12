@@ -5,6 +5,8 @@ const toggler = document.querySelector(".toggle");
 const timeEl = document.querySelector(".time");
 const dateEl = document.querySelector(".date");
 const body = document.querySelector("html");
+const quote = document.querySelector("#quote");
+const quoteTime = document.querySelector("#quoteTime");
 
 // toggler.addEventListener("click", () => {
 
@@ -20,6 +22,8 @@ toggler.addEventListener("click", () => {
   body.classList.toggle("dark");
   if (body.classList.contains("dark")) {
     toggler.innerHTML = "revert";
+  } else {
+    toggler.innerHTML = "change Tone";
   }
 });
 
@@ -30,7 +34,7 @@ const days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 const months = [
   "JAN",
@@ -56,14 +60,33 @@ const setTime = () => {
   const day = time.getDay();
   const date = time.getDate();
   const month = time.getMonth();
-  const amPm = hour >= 12 ? "PM" : "AM"
+  const amPm = hour >= 12 ? "PM" : "AM";
 
-  hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hour12, 0, 11, 0, 360)}deg)`;
-  minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minute, 0, 59, 0, 360)}deg)`;
-  secondsEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`;
+  hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    hour12,
+    0,
+    11,
+    0,
+    360
+  )}deg)`;
+  minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    minute,
+    0,
+    59,
+    0,
+    360
+  )}deg)`;
+  secondsEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    seconds,
+    0,
+    59,
+    0,
+    360
+  )}deg)`;
 
-  
-  timeEl.innerHTML = `${hour12} : ${minute < 10 ?  `0${minute}` :minute} ${amPm}`;
+  timeEl.innerHTML = `${hour12} : ${
+    minute < 10 ? `0${minute}` : minute
+  } ${amPm}`;
   dateEl.innerHTML = `${days[day]}, ${months[month]} <span class= 'circle'>${date}</span>`;
 };
 
@@ -73,4 +96,4 @@ function scale(number, inMin, inMax, outMin, outMax) {
 
 setTime();
 
-setInterval(setTime, 1000)
+setInterval(setTime, 1000);

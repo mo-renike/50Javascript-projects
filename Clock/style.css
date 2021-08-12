@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:ital,wght@0,900;1,200;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:ital,wght@900;1,200&display=swap");
 
 * {
   box-sizing: border-box;
@@ -24,12 +24,15 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh;
-  overflow: hidden;
   font-family: "Heebo", monospace;
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
-
+.container{
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
 .toggle {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -37,17 +40,15 @@ body {
   border-radius: 5px;
   text-transform: uppercase;
   padding: 10px;
+  margin: 1rem auto;
   font-weight: bold;
-  position: absolute;
-  top: 100px;
   cursor: pointer;
   outline: none;
-  margin-bottom: 30px;
 }
 
-.toggle:active {
+/* .toggle:active {
   transform: scale(1.1);
-}
+} */
 
 .clock-container {
   display: flex;
@@ -68,7 +69,7 @@ body {
      0 15px 10px rgba(0, 0, 0, 0.3),
     inset 0 15px 10px rgba(0, 0, 0, 0.3);
   /* backdrop-filter: blur(25px); */
-}
+}   
 
 .face {
   width: 200px;
@@ -172,6 +173,7 @@ body {
   border-radius: 5px;
   height: 18px;
   width: 18px;
+  padding: 15px;
   display: inline-flex;
   justify-content: center;
   align-items: center;

@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Theme Clock</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <button class="toggle">Change Tone</button>
-  <div class="clock-container">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="toggle">Change Tone</button>
+      <div class="clock-container">
+        <div class="clock">
+          <div class="face"></div>
+          <!-- <img src="face.png" alt=""> -->
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <div class="line line4"></div>
+          <div class="line line5"></div>
+          <div class="line line6"></div>
+          <div class="needle hour"></div>
+          <div class="needle minute"></div>
+          <div class="needle second"></div>
+          <div class="center-point"></div>
+        </div>
 
-    <div class="clock">
-      <div class="face"></div>
-      <!-- <img src="face.png" alt=""> -->
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-      <div class="line line4"></div>
-      <div class="line line5"></div>
-      <div class="line line6"></div>
-      <div class="needle hour"></div>
-      <div class="needle minute"></div>
-      <div class="needle second"></div>
-      <div class="center-point"></div>
+        <div class="time">12:00</div>
+        <div class="date">Monday, Nov <span class="circle">6</span></div>
+      </div>
     </div>
-
-    <div class="time">12:00</div>
-    <div class="date">Monday, Nov <span class="circle">6</span> </div>
-  </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
