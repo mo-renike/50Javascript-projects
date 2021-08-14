@@ -5,8 +5,6 @@ const toggler = document.querySelector(".toggle");
 const timeEl = document.querySelector(".time");
 const dateEl = document.querySelector(".date");
 const body = document.querySelector("html");
-const quote = document.querySelector("#quote");
-const quoteTime = document.querySelector("#quoteTime");
 
 // toggler.addEventListener("click", () => {
 
