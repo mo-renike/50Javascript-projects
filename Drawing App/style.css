@@ -25,7 +25,7 @@ canvas{
 .controls{
     background-color: var(--primary-color);
     padding: .8rem;
-    width: 504px;
+    width: 604px;
     display: flex;
 }
 .controls > * {
