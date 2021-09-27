@@ -15,6 +15,7 @@ body {
   overflow: hidden;
   padding: 1.5rem;
   font-size: 20px;
+  color: white;
   font-family: "Source Code Pro", monospace;
 }
 
@@ -30,9 +31,10 @@ body {
 
 h3 {
   margin: 0;
-  opacity: 0.7;
+  opacity: 0.5;
   letter-spacing: 2px;
   font-size: 1.6em;
+  text-decoration: underline;
 }
 
 .jokes {
@@ -42,12 +44,11 @@ h3 {
   margin: 3rem auto;
   max-width: 80%;
 }
-
 .btn {
   background-color: #203040;
   border-radius: 10px;
-  /* color: #efefef; */
-  box-shadow: 3px 3px 4px #111111, -3px -3px 4px #0f0f0f;
+  color: #efefef;
+  box-shadow: 2px 2px 2px #111111, -2px -2px 2px #0f0f0f;
   padding: 1em 2.2em;
   font-size: 1em;
   font-weight: bold;
@@ -59,14 +60,14 @@ h3 {
   transform: scale(0.93);
 }
 
-@media (max-width:769px) {
-    .container{
-        width: 90%;
-    }
-    .jokes{
-        max-width: 90%;
-    }
-    body{
-        font-size: 18px;
-    }
+@media (max-width: 769px) {
+  .container {
+    width: 90%;
+  }
+  .jokes {
+    max-width: 90%;
+  }
+  body {
+    font-size: 18px;
+  }
 }
