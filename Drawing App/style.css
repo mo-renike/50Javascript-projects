@@ -41,7 +41,7 @@ canvas{
     justify-content: center;
     margin: 0.3rem;
     padding:0.3rem;
-    cusor:pointer;
+    cursor: pointer;
 }
 
 .controls > *:last-child{
