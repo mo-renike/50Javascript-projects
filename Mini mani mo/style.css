@@ -43,7 +43,7 @@ textarea{
 
 }
 
-.tags{
+#tags{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

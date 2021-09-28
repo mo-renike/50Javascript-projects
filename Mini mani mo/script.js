@@ -1,12 +1,12 @@
-const tagWrapper = document.querySelector(".tags");
-const textarea = document.querySelector("#textarea");
+const tagsEl = document.getElementById("tags");
+const textarea = document.getElementById("textarea");
 
 textarea.focus();
 
 textarea.addEventListener("keyup", (e) => {
   createTags(e.target.value);
 
-  if (e.key == "Enter") {
+  if (e.key === "Enter") {
     setTimeout(() => {
       e.target.value = "";
     }, 10);
@@ -21,13 +21,13 @@ function createTags(input) {
     .filter((tag) => tag.trim() !== "")
     .map((tag) => tag.trim());
 
-  tagWrapper.innerHTML = "";
+  tagsEl.innerHTML = "";
 
   tags.forEach((tag) => {
     const tagEl = document.createElement("span");
     tagEl.classList.add("tag");
     tagEl.innerText = tag;
-    tagWrapper.appendChild(tagEl);
+    tagsEl.appendChild(tagEl);
   });
 }
 
@@ -35,26 +35,27 @@ function randomSelect() {
   const times = 30;
 
   const interval = setInterval(() => {
-    const randomTag = pickRandomTag()
-     
-    highlightTag(randomTag);
+    const randomTag = pickRandomTag();
 
-    setTimeout(() => {
-      highlightRemove(randomTag);
-    }, 100);
+    if (randomTag !== undefined) {
+      highlightTag(randomTag);
+
+      setTimeout(() => {
+        unHighlightTag(randomTag);
+      }, 100);
+    }
   }, 100);
 
   setTimeout(() => {
-    clearInterval(interval)
+    clearInterval(interval);
+
     setTimeout(() => {
-      randomTag = pickRandomTag()
+      const randomTag = pickRandomTag();
+
       highlightTag(randomTag);
     }, 100);
-
   }, times * 100);
 }
-  
-
 
 function pickRandomTag() {
   const tags = document.querySelectorAll(".tag");
@@ -62,8 +63,9 @@ function pickRandomTag() {
 }
 
 function highlightTag(tag) {
-  tag.classList.add(".highlight");
+  tag.classList.add("highlight");
 }
-function highlightRemove(tag) {
-  tag.classList.remove(".highlight");
+
+function unHighlightTag(tag) {
+  tag.classList.remove("highlight");
 }
