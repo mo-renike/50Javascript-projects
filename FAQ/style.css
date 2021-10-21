@@ -34,7 +34,7 @@ h1 {
 .faq.active {
   border: none;
   outline: none;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.9), -1px -3px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 4px 6px rgba(145, 99, 99, 0.9), -1px -3px 6px rgba(0, 0, 0, 0.9);
 }
 
 .faq.active::before, 
