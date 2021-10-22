@@ -6,61 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>50Javascript Projects</title>
     <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            border: 0;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+      }
+      :root {
+        --dark-bg: #c3c6b1;
+        --darker-bg: #adb38a;
+        --darkest-bg: #060706;
+        --font-color: #c58b2a;
+      }
+      body {
+        background-color: var(--dark-bg);
+        color: var(--darkest-bg);
+        font-size: 18px;
+      }
+      .container {
+        width: 80%;
+        background-color: var(--darker-bg);
+        padding: 50px;
+        margin: 1em auto;
+      }
+      header {
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        margin-bottom: 2em;
+      }
+      h2 {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+      }
+      header a {
+        background-color: var(--font-color);
+        color: var(--darkest-bg);
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 1px 2px 2px var(--darkest-bg),
+          -1px -2px 2px var(--darkest-bg);
+        padding: 0.5em 1em;
+        margin: 10px;
+        border-radius: 10px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 455px) {
+        body {
+          font-size: 15px;
         }
-        :root{
-            --dark-bg: #c3c6b1;
-            --darker-bg:#adb38a;
-            --darkest-bg:#060706;
-            --font-color:#c58b2a;
-        }
-        body{
-            background-color: var(--dark-bg);
-            color: var(--darkest-bg);
-            font-size: 18px;
-        }
-        .container{
-            width: 80%;
-            background-color: var(--darker-bg);
-            padding: 50px;
-            margin: 1em auto;
-        }
-        header{
-            text-align: center;
-            margin: auto;
-            padding: 20px;
-            margin-bottom: 2em;
-        }
-        h2{ font-size : 1.4em;
-            margin-bottom: .5em;
-        }
-        header a{
-            background-color: var(--font-color);
-            color: var(--darkest-bg);
-        }
-        a{
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 1px 2px 2px var(--darkest-bg),  -1px -2px 2px var(--darkest-bg) ;
-            padding: .5em 1em;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        .projects{
-            display: flex;
-            flex-wrap: wrap;
-          }
-          @media (max-width:455px) {
-            body{
-              font-size: 15px;
-            }
-          }
+      }
     </style>
   </head>
   <body>
@@ -68,7 +70,9 @@
       <div class="container">
         <header>
           <h2>50 Javascript Projects</h2>
-          <a href="https://github.com/mo-renike/50days-of-Javascript">Github Repository</a>
+          <a href="https://github.com/mo-renike/50days-of-Javascript"
+            >Github Repository</a
+          >
         </header>
         <div class="projects">
           <a href="Animated navigation/animated.html">Animated Navigation</a>
@@ -89,18 +93,19 @@
           <a href="Drink water/index.html">Drink Water</a>
           <a href="Movie App/index.html">Movie App</a>
           <a href="Background Slider/index.html">Background Slider</a>
-          <a href="Clock/index.html">Analog Clock</a
-          ><a href="Button ripple effect/index.html">Button ripple Effect</a>
+          <a href="Clock/index.html">Analog Clock</a>
+          <a href="Button ripple effect/index.html">Button ripple Effect</a>
           <a href="Drag n Drop/index.html">Drag n Drop</a>
           <a href="Drawing App/index.html">Drawing App</a>
-          <a href=""></a
+          <a href="kinetic loader/index.html">Kinetic Loader</a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a><a href=""></a><a href=""></a><a href=""></a
           ><a href=""></a><a href=""></a><a href=""></a><a href=""></a
           ><a href=""></a><a href=""></a><a href=""></a><a href=""></a
           ><a href=""></a><a href=""></a><a href=""></a><a href=""></a
           ><a href=""></a><a href=""></a><a href=""></a><a href=""></a
-          ><a href=""></a><a href=""></a><a href=""></a><a href=""></a
-          ><a href=""></a><a href=""></a><a href=""></a><a href=""></a
-          ><a href=""></a><a href=""></a>
+          ><a href=""></a><a href=""></a><a href=""></a><a href=""></a>
         </div>
       </div>
     </main>
