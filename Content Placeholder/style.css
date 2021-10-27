@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #1f1f1f;
+  background: #545454;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -64,7 +64,7 @@ body {
 .card-title {
   margin: 0;
 }
-.card-exerpt {
+.card-excerpt {
   color: #5f5f5f;
   margin: 10px 0 20px;
 }
@@ -84,4 +84,35 @@ body {
 
 .author-info small {
   color: #5f5f5f;
+}
+
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 100%;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
 }
