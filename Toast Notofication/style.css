@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,900;1,200;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-image: linear-gradient(70deg, #01071a, #1e0202);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 1rem;
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 2.7rem;
+  text-align: center;
+}
+form input {
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin: 5px 0 10px;
+  padding: 10px;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+label {
+  opacity: 0.4;
+  font-weight: bold;
+  font-size: 0.79rem;
+}
+
+button,
+.toast {
+  padding: 9px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: 0.4s ease;
+  margin-top: 5px;
+  color: #01071a;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+  background-color: transparent;
+}
+button:active {
+  transform: scale(0.98);
+}
+.toast {
+  transition: 0.3s ease;
+  padding: 10px 1rem;
+  font-size: 0.8rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+#toasts {
+  position: fixed;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 10px;
+}

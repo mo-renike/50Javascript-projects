@@ -1,0 +1,35 @@
+nav {
+  background-color: #013001;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 6px 12px;
+  color: #dfd1cc;
+  text-align: center;
+  text-transform: uppercase;
+  text-overflow: hidden;
+  text-decoration: none;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

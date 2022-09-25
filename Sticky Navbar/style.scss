@@ -1,0 +1,35 @@
+$pry1: #007c00;
+$pry2: #dfd1cc;
+$pry3: #013001;
+
+nav {
+  background-color: $pry3;
+  display: flex;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    padding: 6px 12px;
+    color: $pry2;
+    text: {
+      align: center;
+      transform: uppercase;
+      overflow: hidden;
+      decoration: none;
+    }
+  }
+}
+
+body {
+  font: {
+    family: Helvetica, sans-serif;
+    size: 18px;
+    weight: bold;
+  }
+}
